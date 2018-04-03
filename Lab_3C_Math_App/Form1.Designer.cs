@@ -39,6 +39,8 @@
             this.UserValue2 = new System.Windows.Forms.TextBox();
             this.Value1 = new System.Windows.Forms.Label();
             this.Value2 = new System.Windows.Forms.Label();
+            this.CalculatedValue1 = new System.Windows.Forms.TextBox();
+            this.CalculatedValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FormIntro
@@ -155,11 +157,32 @@
             this.Value2.Text = "Value 2";
             this.Value2.Click += new System.EventHandler(this.Value2_Click);
             // 
+            // CalculatedValue1
+            // 
+            this.CalculatedValue1.Location = new System.Drawing.Point(271, 282);
+            this.CalculatedValue1.Name = "CalculatedValue1";
+            this.CalculatedValue1.ReadOnly = true;
+            this.CalculatedValue1.Size = new System.Drawing.Size(115, 20);
+            this.CalculatedValue1.TabIndex = 12;
+            this.CalculatedValue1.TextChanged += new System.EventHandler(this.CalculatedValue1_TextChanged);
+            // 
+            // CalculatedValue
+            // 
+            this.CalculatedValue.AutoSize = true;
+            this.CalculatedValue.Location = new System.Drawing.Point(183, 285);
+            this.CalculatedValue.Name = "CalculatedValue";
+            this.CalculatedValue.Size = new System.Drawing.Size(31, 13);
+            this.CalculatedValue.TabIndex = 13;
+            this.CalculatedValue.Text = "Total";
+            this.CalculatedValue.Click += new System.EventHandler(this.CalculatedValue_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 450);
+            this.Controls.Add(this.CalculatedValue);
+            this.Controls.Add(this.CalculatedValue1);
             this.Controls.Add(this.Value2);
             this.Controls.Add(this.Value1);
             this.Controls.Add(this.UserValue2);
@@ -174,7 +197,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Lab 3C Math Application";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,6 +215,8 @@
         private System.Windows.Forms.TextBox UserValue2;
         private System.Windows.Forms.Label Value1;
         private System.Windows.Forms.Label Value2;
+        private System.Windows.Forms.TextBox CalculatedValue1;
+        private System.Windows.Forms.Label CalculatedValue;
     }
 }
 
